@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(6, 54, 6);
+    font-family:'Dancing Script', cursive;
+}
+button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 40rem;
+    aspect-ratio: 3/1.9;
+    background-color: bisque;
+    border: none;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15rem 20rem 0 20rem;
+  border-style: solid;
+  border-color: gray transparent transparent transparent;
+}
+button::after { 
+    content: "Click here!!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+}
+.inactive {
+    display: none;
+}
+.video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(3);
+    display: none;
+}
+.video.action {
+    display: block;
+}
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.5);
+    opacity: 0;
+    background-color: goldenrod;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    pointer-events: none;
+    user-select: none;
+}
+.message h1 {
+    background-color: goldenrod;
+}
+.message h2 {
+    background-color: goldenrod;
+}
+.message.active {
+    transform: translate(-50%,-50%) scale(1.4);
+    opacity: 1;
+    pointer-events: auto;
+}
